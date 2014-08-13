@@ -142,7 +142,6 @@
         <br/>
         <div class="form-group" style="padding-bottom: 20px;">
             <div class="pull-right">
-                <button type="button" id="btn_cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 <button type="submit" id="btn_register" class="btn btn-primary">Submit</button>
             </div>
         </div>  

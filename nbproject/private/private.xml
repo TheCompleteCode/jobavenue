@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/wamp/www/jobavenue/app/Controller/AppController.php</file>
             <file>file:/D:/wamp/www/jobavenue/app/View/Elements/navigation_bar.ctp</file>
             <file>file:/D:/wamp/www/jobavenue/app/webroot/css/customize.css</file>
             <file>file:/D:/wamp/www/jobavenue/app/View/Elements/login_modal.ctp</file>
             <file>file:/D:/wamp/www/jobavenue/app/Controller/UsersController.php</file>
+            <file>file:/D:/wamp/www/jobavenue/app/View/Jobs/index.ctp</file>
             <file>file:/D:/wamp/www/jobavenue/app/webroot/js/users/index.js</file>
-            <file>file:/D:/wamp/www/jobavenue/app/Controller/JobsController.php</file>
             <file>file:/D:/wamp/www/jobavenue/app/View/Users/register.ctp</file>
         </group>
     </open-files>

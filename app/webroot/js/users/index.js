@@ -9,18 +9,28 @@ $(document).ready(function(){
     });
     
     $("#btn_login").on('click', function(e){
+        $('#login_message').text('');
         $('#loader_modal').modal('show');
+        
         $.ajax({
             url: '/jobavenue/users/login',
+            type: 'POST',
             data: $('input').serialize()
         }).done(function(response){
             $('#loader_modal').modal('hide');            
             if(response == 'success'){
                 $('#success_modal').modal('hide');
+                $('#login_message').append('You\'re logged in successfully!')
+                                   .addClass('result-success')
+                                   .show();
                 //redirect to index page
-                window.location.replace('http://localhost/jobavenue/');
+                setTimeout(function(){
+                    window.location.replace('http://localhost/jobavenue/');
+                },1000);
             }else {
-                $('#login_message').show();
+                $('#login_message').append('Invalid Username or Password.')
+                                   .addClass('result-failed')
+                                   .show();
             }
         });
     });
@@ -29,6 +39,7 @@ $(document).ready(function(){
         $('#loader_modal').modal('show');
         $.ajax({
             url: '/jobavenue/users/addUser',
+            type: 'POST',
             data: $('#registration_form').serialize()
         }).done(function(response){
             $('#loader_modal').modal('hide');            
@@ -39,9 +50,12 @@ $(document).ready(function(){
                     //redirect to index page
                     window.location.replace('http://localhost/jobavenue/');
                 },1000);            
-            }else {
+            }else {                
                 alert('Unable to register new user this time.');
             }
+        }).fail(function(){
+            $('#loader_modal').modal('hide');
+            alert('Server error. Try again later.');
         });
         return false;
         e.preventDefault();

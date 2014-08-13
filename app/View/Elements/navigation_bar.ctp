@@ -19,14 +19,16 @@
                 </li>
                 <li>
                     <?php 
-                        echo $this->Html->link('About Us',
-                            array('controller' => 'company', 'action' => 'aboutUs'));
+                        echo '<li>';                         
+                        echo '<a href="#" id="about_us">About Us</a>'; 
+                        echo '</li>';
                     ?>
                 </li>
                 <li>
                     <?php 
-                        echo $this->Html->link('Contact Us',
-                            array('controller' => 'company', 'action' => 'contactUs'));
+                        echo '<li>';                         
+                        echo '<a href="#" id="contact_us">Contact Us</a>'; 
+                        echo '</li>';
                     ?>
                 </li>
             </ul>
@@ -43,6 +45,9 @@
                             echo '</li>';
                         }
                         if($logged_in) {
+                            echo '<li>';                         
+                            echo '<a href="" id="post_job">Post Job</a>'; 
+                            echo '</li>';
                             echo '<li class="dropdown">';
                             echo '<a href="" class="dropdown-toggle" data-toggle="dropdown">';                       
                             echo $current_user;                           

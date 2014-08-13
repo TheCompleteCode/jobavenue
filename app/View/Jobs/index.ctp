@@ -1,4 +1,5 @@
 <?php
+    //var_dump($current_user);
 ?>
 <div class="container">
     <div class="col-md-offset-2">
@@ -44,10 +45,26 @@
                         <div>
                             <p>IBM Philippines - Davao City
                                 <span class="pull-right" style="padding-left: 12%;">
-                                    Januar 25, 2014
+                                    August 13, 2014
                                 </span>
                                 <span class="pull-right">
                                     2 years exp. required
+                                </span>
+                                
+                            </p>
+                        </div>
+                </li> 
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">
+                        <h4><a href="#">Network Administrator</a></h4>
+                        <div>
+                            <p>Microsoft Corporation - Cebu City
+                                <span class="pull-right" style="padding-left: 12%;">
+                                    August 8, 2014
+                                </span>
+                                <span class="pull-right">
+                                    5 years exp. required
                                 </span>
                                 
                             </p>

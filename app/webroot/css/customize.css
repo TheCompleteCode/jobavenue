@@ -1,3 +1,6 @@
+body {
+    overflow: visible !important;
+}
 .logo {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -74,8 +77,7 @@ label {
     color: red;
 }
 .result-success {
-    background-color: green;
-    color: white;
+    color: green;
 }
 .invalid-input {
    border: #FF0000 2px solid;

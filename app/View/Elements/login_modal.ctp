@@ -10,10 +10,10 @@
             <form action="" method="POST">
             <div class="modal-body" style="margin-left: 3px;">
                 <form id="login_form" action="" method="post">
-                    <div id="login_message" class="row">
-                        <div class="col-xs-12 result-failed">
-                            
-                            <span class="">Invalid Username/Password</span>
+                    <div class="row">
+                        <div class="col-xs-12">                            
+                            <span id="login_message">
+                            </span>
                         </div>
                     </div>
                     <div class="row">

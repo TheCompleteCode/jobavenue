@@ -20,9 +20,9 @@ class UsersController extends AppController
     public function addUser()
     {   
         $this->autoRender = false;
-        if(!empty($this->request->query)) {
-            if($this->User->save($this->request->query['data'])) {
-                $this->Auth->login($this->request->query['data']['User']);
+        if(!empty($this->request->data)) {
+            if($this->User->save($this->request->data)) {
+                $this->Auth->login($this->request->data);
                 return 'success';
             }
         }
@@ -33,10 +33,8 @@ class UsersController extends AppController
     public function login() 
     {    
 	$this->autoRender = false;
-        if(!empty($this->request->query)) {
-            if($this->Auth->login($this->request->query['data']['User'])) {
-                return 'success';
-            }
+        if($this->Auth->login()) {
+            return 'success';
         }
         return 'failed';
     }
