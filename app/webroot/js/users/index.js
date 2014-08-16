@@ -15,7 +15,7 @@ $(document).ready(function(){
         $.ajax({
             url: '/jobavenue/users/login',
             type: 'POST',
-            data: $('input').serialize()
+            data: $('#login_modal :input').serialize()
         }).done(function(response){
             $('#loader_modal').modal('hide');            
             if(response == 'success'){

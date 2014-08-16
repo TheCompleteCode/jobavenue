@@ -34,6 +34,7 @@ class AppController extends Controller
     public $components = array(
         //'DebugKit.Toolbar',
         'RequestHandler',
+        'Cookie',
         'Session',
         'Auth' => array(
             'loginRedirect' => array('controller' => 'jobs', 'action' => 'index'),
@@ -54,17 +55,23 @@ class AppController extends Controller
     }
     
     public function beforeFilter()
-    {
-		
+    {		
         $this->Auth->allow(
                     'index', 'view', 'register', 'login', 'search', 'aboutUs', 
                     'contactUs', 'addUser'
         );
+        
+        if($this->Auth->user('email')){
+            $user = $this->Auth->user('email');
+        }else {
+            $current_user = $this->Auth->user();
+            $user = $current_user['User']['email'];
+        }
         $this->set('logged_in', $this->Auth->loggedIn());
-        $this->set('current_user', $this->Auth->user('email'));
+        $this->set('current_user', $user);
     }
     
     public function beforRender() {
-        $this->Auth->allow('index','view');
+        $this->Auth->allow('index','view', 'register');
     }
 }
